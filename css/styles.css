@@ -1,0 +1,1084 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Segoe UI, sans-serif;
+}
+ body {
+     background: #f4f8ff;
+}
+ .navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 18px 60px;
+     background: rgba(10, 30, 70, 0.45);
+     backdrop-filter: blur(15px);
+     z-index: 999;
+}
+ .navbar img {
+     height: 40px;
+     width: 50px;
+}
+ .logo {
+     color: white;
+     font-size: 30px;
+}
+ .nav-links {
+     display: flex;
+     list-style: none;
+}
+ .nav-links li {
+     position: relative;
+}
+ .nav-links a {
+     display: block;
+     padding: 18px;
+     text-decoration: none;
+     color: white;
+     transition: 0.3s;
+}
+ .nav-links a:hover {
+     color: #ffd24d;
+}
+/* DROPDOWN */
+ .dropdown-menu {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     min-width: 240px;
+     background: white;
+     border-radius: 14px;
+     overflow: hidden;
+     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+ .dropdown:hover .dropdown-menu {
+     display: block;
+     animation: slide 0.3s;
+}
+ .submenu ul {
+     display: none;
+     position: absolute;
+     left: 100%;
+     top: 0;
+     background: white;
+     width: 230px;
+}
+ .submenu:hover ul {
+     display: block;
+}
+ .dropdown-menu a {
+     color: #222;
+}
+ @keyframes slide {
+     from {
+         opacity: 0;
+         transform: translateY(15px);
+    }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+    }
+}
+/* ========================= FOOTER ========================= */
+ footer {
+     background: #0f172a;
+     color: white;
+     text-align: center;
+     padding: 50px 20px;
+}
+ footer h3 {
+     margin-bottom: 10px;
+}
+/* HERO */
+ .hero {
+     height: 100vh;
+     background: url("../images/home-bg.jpg");
+     background-size: cover;
+     background-position: center;
+}
+ .overlay {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+}
+ .profile-card {
+     text-align: center;
+     color: white;
+     max-width: 700px;
+     animation: fadeUp 1.3s;
+}
+ .profile-card img {
+     width: 240px;
+     height: 240px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 8px solid white;
+     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+ .profile-card h1 {
+     margin-top: 25px;
+     font-size: 50px;
+}
+ .profile-card h3 {
+     margin: 20px;
+     font-weight: 300;
+}
+ .profile-card p {
+     line-height: 1.8;
+}
+ .hero-btn {
+     display: inline-block;
+     margin-top: 30px;
+     padding: 18px 40px;
+     background: #ffd24d;
+     border-radius: 40px;
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     transition: 0.4s;
+}
+ .hero-btn:hover {
+     transform: translateY(-6px);
+}
+/* WELCOME */
+ .welcome {
+     padding: 100px 60px;
+     text-align: center;
+}
+ .welcome h2 {
+     font-size: 42px;
+     margin-bottom: 30px;
+}
+ .welcome p {
+     max-width: 900px;
+     margin: auto;
+     font-size: 20px;
+     line-height: 2;
+}
+ @keyframes fadeUp {
+     from {
+         opacity: 0;
+         transform: translateY(100px);
+    }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+    }
+}
+ .Reading-Skills, .Writing-Skills, .GD-Skills {
+     padding: 50px 20px;
+     text-align: center;
+}
+ .Reading-Skills h1, .Writing-Skills h1, .GD-Skills h1 {
+     font-size: 2rem;
+     font-weight: 700;
+    /* Bold */
+     color: #222;
+     margin-bottom: 20px;
+     text-align: center;
+}
+ .Reading-Skills p, .Writing-Skills p, .GD-Skills p {
+     max-width: 800px;
+     margin: 0 auto;
+    /* Center paragraph block */
+     font-size: 1.1rem;
+     font-weight: 400;
+    /* Normal text */
+     line-height: 1.8;
+     color: #555;
+     text-align: center;
+}
+
+ .teacher-profile {
+     padding: 120px 10%;
+     background: #f8fbff;
+}
+ .teacher-profile h1 {
+     text-align: center;
+     font-size: 50px;
+     margin-bottom: 80px;
+     color: #15305b;
+}
+ .teacher-container {
+     display: flex;
+     align-items: center;
+     gap: 80px;
+}
+ .teacher-image {
+     flex: 1;
+}
+ .teacher-image img {
+     width: 100%;
+     max-width: 450px;
+     border-radius: 35px;
+     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+     transition: 0.5s;
+}
+ .teacher-image img:hover {
+     transform: scale(1.03);
+}
+ .teacher-details {
+     flex: 1;
+}
+ .teacher-details h2 {
+     font-size: 50px;
+     color: #183663;
+}
+ .teacher-details h3 {
+     margin: 20px 0;
+     color: #4d6587;
+}
+ .teacher-details p {
+     font-size: 18px;
+     line-height: 2;
+     color: #444;
+}
+ .bio-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 25px;
+     margin-top: 40px;
+}
+ .bio-grid div {
+     background: white;
+     padding: 25px;
+     border-radius: 20px;
+     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+/* DEFINITION */
+ .teacher-definition {
+     padding: 120px;
+     text-align: center;
+     background: white;
+}
+ .teacher-definition h1 {
+     font-size: 50px;
+     color: #15305b;
+     margin-bottom: 40px;
+}
+ .teacher-definition p {
+     max-width: 1000px;
+     margin: auto;
+     line-height: 2.2;
+     font-size: 19px;
+}
+/* IMPORTANCE */
+ .teacher-importance {
+     padding: 120px;
+     background: #f8fbff;
+     text-align: center;
+}
+ .teacher-importance h1 {
+     font-size: 50px;
+     margin-bottom: 70px;
+     color: #15305b;
+}
+ .importance-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 40px;
+}
+ .importance-card {
+     padding: 50px;
+     background: white;
+     border-radius: 30px;
+     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+     transition: 0.5s;
+}
+ .importance-card:hover {
+     transform: translateY(-15px);
+}
+ .importance-card h3 {
+     margin-bottom: 20px;
+     font-size: 28px;
+}
+ .importance-card p {
+     line-height: 1.9;
+}
+ @media (max-width: 900px) {
+     .teacher-container {
+         flex-direction: column;
+    }
+     .importance-grid {
+         grid-template-columns: 1fr;
+    }
+     .bio-grid {
+         grid-template-columns: 1fr;
+    }
+}
+/* ABOUT COLLEGE */
+ .college-logo {
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     margin-right: 12px;
+     vertical-align: middle;
+}
+ .college-banner {
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/malla-reddy-bg.jpg");
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .college-overlay {
+     text-align: center;
+     color: white;
+}
+ .college-overlay h1 {
+     font-size: 80px;
+}
+ .college-overlay p {
+     font-size: 24px;
+     margin-top: 25px;
+}
+ .college-description {
+     padding: 50px;
+     text-align: center;
+}
+ .college-description h1 {
+     font-size: 50px;
+     margin-bottom: 30px;
+}
+ .college-description p {
+     max-width: 1000px;
+     margin: auto;
+     line-height: 2;
+     font-size: 18px;
+}
+ .college-gallery {
+     padding: 120px;
+}
+ .gallery-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 30px;
+}
+ .gallery-grid img {
+     width: 100%;
+     height: 350px;
+     object-fit: cover;
+     border-radius: 25px;
+     transition: 0.5s;
+}
+ .gallery-grid img:hover {
+     transform: scale(1.04);
+}
+ .facilities {
+     padding: 120px;
+     text-align: center;
+}
+ .facilities h1 {
+     margin-bottom: 80px;
+}
+ .facility-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 25px;
+}
+ .facility-card {
+     padding: 40px;
+     background: white;
+     border-radius: 25px;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+     transition: 0.4s;
+}
+ .facility-card:hover {
+     transform: translateY(-15px);
+}
+ .closing {
+     padding: 120px;
+     text-align: center;
+     background: #f5f8ff;
+}
+ @media (max-width: 900px) {
+     .gallery-grid {
+         grid-template-columns: 1fr;
+    }
+     .facility-grid {
+         grid-template-columns: 1fr;
+    }
+     .college-overlay h1 {
+         font-size: 45px;
+    }
+}
+/* BED PAGE */
+ .bed-hero {
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/bed-bg.jpg");
+     background-size: cover;
+     background-position: center;
+}
+ .bed-overlay {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .bed-content {
+     text-align: center;
+     color: white;
+     animation: fadeUp 1.2s;
+}
+ .bed-content h1 {
+     font-size: 90px;
+     font-weight: 900;
+     letter-spacing: 3px;
+}
+ .bed-content p {
+     font-size: 24px;
+     max-width: 900px;
+     margin: 30px auto;
+     line-height: 1.8;
+}
+ .bed-btn {
+     display: inline-block;
+     padding: 20px 45px;
+     background: linear-gradient(90deg, #f8b500, #ffde59);
+     color: black;
+     text-decoration: none;
+     border-radius: 50px;
+     font-weight: bold;
+     transition: 0.4s;
+}
+ .bed-btn:hover {
+     transform: translateY(-8px);
+}
+ .subjects {
+     padding: 120px;
+     background: #f5f8ff;
+}
+ .subjects h1 {
+     text-align: center;
+     font-size: 60px;
+     margin-bottom: 80px;
+     color: #18345e;
+}
+ .subject-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 35px;
+}
+ .subject-card {
+     background: white;
+     padding: 45px;
+     border-radius: 30px;
+     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+     transition: 0.5s;
+}
+ .subject-card:hover {
+     transform: translateY(-15px);
+}
+ .subject-card h2 {
+     color: #173660;
+     margin-bottom: 20px;
+}
+ .subject-card p {
+     line-height: 1.8;
+}
+ .bed-info {
+     padding: 120px;
+     text-align: center;
+}
+ .bed-info h1 {
+     font-size: 60px;
+     margin-bottom: 40px;
+}
+ .bed-info p {
+     max-width: 1000px;
+     margin: auto;
+     font-size: 20px;
+     line-height: 2;
+}
+ @media (max-width: 900px) {
+     .subject-grid {
+         grid-template-columns: 1fr;
+    }
+     .bed-content h1 {
+         font-size: 55px;
+    }
+}
+/* SEMESTER */
+ .sem-hero {
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/semester-bg.jpg");
+     background-size: cover;
+     background-position: center;
+}
+ .sem-overlay {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .sem-content {
+     text-align: center;
+     color: white;
+}
+ .sem-content h1 {
+     font-size: 90px;
+     font-weight: 900;
+}
+ .sem-content p {
+     font-size: 24px;
+     margin-top: 25px;
+}
+ .sem-subjects {
+     padding: 120px;
+     background: #f7f9ff;
+}
+ .sem-subjects h1 {
+     text-align: center;
+     font-size: 60px;
+     margin-bottom: 70px;
+     color: #18335f;
+}
+ .activities {
+     padding: 100px;
+     text-align: center;
+}
+ .activities h1 {
+     font-size: 60px;
+     margin-bottom: 60px;
+}
+ .activity-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 50px;
+}
+ .activity-card {
+     text-decoration: none;
+     color: #222;
+     padding: 35px;
+     background: white;
+     border-radius: 35px;
+     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+     transition: 0.5s;
+}
+ .activity-card:hover {
+     transform: translateY(-15px);
+     background: linear-gradient(90deg, #ffe37a, #fff1b0);
+}
+ .activity-card h2 {
+     margin-bottom: 20px;
+}
+ @media (max-width: 900px) {
+     .activity-grid {
+         grid-template-columns: 1fr;
+    }
+     .sem-content h1 {
+         font-size: 50px;
+    }
+}
+/* PEER PAGE */
+ .peer-hero {
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../images/peer-bg.jpg");
+     background-size: cover;
+     background-position: center;
+}
+ .peer-overlay {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .peer-content {
+     text-align: center;
+     color: white;
+}
+ .peer-content h1 {
+     font-size: 50px;
+     font-weight: 800;
+}
+ .peer-content p {
+     font-size: 20px;
+     margin-top: 25px;
+}
+/* DEFINITION */
+ .peer-definition {
+     padding: 120px;
+     text-align: center;
+     background: #f7f9ff;
+}
+ .peer-definition h1 {
+     font-size: 60px;
+     margin-bottom: 50px;
+     color: #173660;
+}
+ .peer-definition p {
+     max-width: 1000px;
+     margin: auto;
+     font-size: 20px;
+     line-height: 2.1;
+     color: #444;
+}
+/* GALLERY */
+ .peer-gallery {
+     padding: 120px;
+     text-align: center;
+}
+ .peer-gallery h1 {
+     font-size: 60px;
+     margin-bottom: 20px;
+     color: #173660;
+}
+ .peer-gallery p {
+     margin-bottom: 60px;
+}
+ .gallery-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 35px;
+}
+ .gallery-grid img {
+     width: 100%;
+     height: 350px;
+     object-fit: cover;
+     border-radius: 30px;
+     transition: 0.5s;
+     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+ .gallery-grid img:hover {
+     transform: scale(1.05);
+}
+ @media (max-width: 900px) {
+     .gallery-grid {
+         grid-template-columns: 1fr;
+    }
+     .peer-content h1 {
+         font-size: 55px;
+    }
+     .peer-definition h1 {
+         font-size: 40px;
+    }
+}
+/* =================== YOGA LEARNING =================== */
+ .yoga-learning {
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/yoga-banner.jpg");
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .yoga-content {
+     text-align: center;
+     color: white;
+}
+ .yoga-content h1 {
+     font-size: 90px;
+     font-weight: 900;
+     margin-bottom: 20px;
+}
+ .yoga-content p {
+     font-size: 26px;
+}
+/* =================== DEFINITION =================== */
+ .yoga-definition {
+     padding: 120px 10%;
+     text-align: center;
+     background: #f8fbff;
+}
+ .yoga-definition h1 {
+     font-size: 60px;
+     margin-bottom: 50px;
+     color: #173660;
+}
+ .yoga-definition p {
+     max-width: 1100px;
+     margin: auto;
+     font-size: 20px;
+     line-height: 2;
+     color: #444;
+}
+/* =================== IMAGE GALLERY =================== */
+ .yoga-gallery {
+     padding: 120px 10%;
+     text-align: center;
+}
+ .yoga-gallery h1 {
+     font-size: 60px;
+     margin-bottom: 20px;
+     color: #173660;
+}
+ .yoga-gallery p {
+     margin-bottom: 60px;
+}
+ .gallery-container {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 35px;
+}
+ .gallery-container img {
+     width: 100%;
+     height: 350px;
+     object-fit: cover;
+     border-radius: 30px;
+     transition: 0.5s;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+ .gallery-container img:hover {
+     transform: scale(1.05);
+}
+/* MOBILE */
+ @media (max-width: 900px) {
+     .gallery-container {
+         grid-template-columns: 1fr;
+    }
+     .yoga-content h1 {
+         font-size: 50px;
+    }
+     .yoga-definition h1 {
+         font-size: 40px;
+    }
+}
+/* SEMESTER 2 */
+ .sem2-banner {
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/sem2-bg.jpg");
+     background-size: cover;
+     background-position: center;
+}
+ .sem2-overlay {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .sem2-content {
+     text-align: center;
+     color: white;
+}
+ .sem2-content h1 {
+     font-size: 90px;
+     font-weight: 900;
+}
+ .sem2-content p {
+     margin-top: 30px;
+     font-size: 26px;
+}
+/* SUBJECTS */
+ .sem2-subjects {
+     padding: 120px;
+     background: #f8fbff;
+}
+ .sem2-subjects h1 {
+     text-align: center;
+     font-size: 60px;
+     margin-bottom: 70px;
+}
+ .sem2-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 35px;
+}
+ .sem2-card {
+     background: white;
+     padding: 45px;
+     border-radius: 30px;
+     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+     transition: 0.5s;
+}
+ .sem2-card:hover {
+     transform: translateY(-15px);
+}
+ .sem2-card h2 {
+     margin-bottom: 20px;
+     color: #18335f;
+}
+/* INFO */
+ .semester-info {
+     padding: 120px;
+     text-align: center;
+}
+ .semester-info h1 {
+     font-size: 60px;
+     margin-bottom: 40px;
+}
+ .semester-info p {
+     max-width: 1000px;
+     margin: auto;
+     line-height: 2;
+}
+/* EXTRA */
+ .extra {
+     padding: 120px;
+     background: #f8fbff;
+     text-align: center;
+}
+ .extra h1 {
+     font-size: 60px;
+     margin-bottom: 70px;
+}
+ .extra-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 35px;
+}
+ .extra-card {
+     padding: 60px;
+     background: white;
+     border-radius: 35px;
+     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+     transition: 0.5s;
+}
+ .extra-card:hover {
+     transform: translateY(-15px);
+}
+ .college-overview {
+     margin: 0 auto;
+     padding: 20px 0px;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+    /* Show content one below another */
+     align-items: center;
+}
+ .college-overview h2 {
+     font-size: 2.5rem;
+     font-weight: 700;
+    /* Bold */
+     color: #222;
+     text-align: center;
+}
+ .college-description {
+     font-size: 1.1rem;
+     line-height: 1.9;
+     color: #555;
+     text-align: center;
+}
+ @media (max-width: 900px) {
+     .sem2-grid {
+         grid-template-columns: 1fr;
+    }
+     .extra-grid {
+         grid-template-columns: 1fr;
+    }
+     .sem2-content h1 {
+         font-size: 50px;
+    }
+}
+/* =============================== RESPONSIVE DESIGN Mobile + Tablet ================================ */
+/* TABLET */
+ @media screen and (max-width: 1024px) {
+     .navbar {
+         padding: 18px 30px;
+    }
+     .logo {
+         font-size: 22px;
+    }
+     .nav-links {
+         gap: 10px;
+    }
+     .hero h1, .bed-content h1, .sem-content h1, .sem2-content h1, .peer-content h1, .yoga-content h1 {
+         font-size: 55px;
+    }
+     .hero p, .bed-content p, .sem-content p, .sem2-content p, .peer-content p, .yoga-content p {
+         font-size: 18px;
+    }
+     .subject-grid, .sem2-grid, .gallery-grid, .yoga-grid, .extra-grid, .bio-grid, .importance-grid {
+         grid-template-columns: repeat(2, 1fr);
+    }
+     .teacher-container, .college-info {
+         flex-direction: column;
+         text-align: center;
+    }
+     .teacher-image img, .college-left img {
+         width: 100%;
+         max-width: 600px;
+    }
+}
+/* MOBILE */
+ @media screen and (max-width: 768px) {
+     body {
+         overflow-x: hidden;
+    }
+   
+     .hero, .bed-hero, .sem-hero, .sem2-banner, .peer-hero, .yoga-learning, .college-banner {
+         height: auto;
+         min-height: 80vh;
+         padding: 140px 20px;
+    }
+     .hero h1, .bed-content h1, .sem-content h1, .sem2-content h1, .peer-content h1, .yoga-content h1 {
+         font-size: 42px;
+    }
+     .hero p, .bed-content p, .sem-content p, .sem2-content p, .peer-content p, .yoga-content p {
+         font-size: 16px;
+         line-height: 1.8;
+    }
+    /* GRID */
+     .subject-grid, .sem2-grid, .gallery-grid, .yoga-grid, .extra-grid, .bio-grid, .importance-grid, .facility-grid {
+         grid-template-columns: 1fr;
+    }
+    /* SECTIONS */
+     .teacher-profile, .teacher-definition, .teacher-importance, .subjects, .sem2-subjects, .extra, .peer-gallery, .yoga-gallery, .facilities, .college-description {
+         padding: 70px 25px;
+    }
+     .teacher-profile h1, .teacher-definition h1, .teacher-importance h1, .subjects h1, .sem2-subjects h1, .extra h1, .peer-gallery h1, .yoga-gallery h1 {
+         font-size: 34px;
+    }
+     .teacher-details h2 {
+         font-size: 30px;
+    }
+     .teacher-details p, .teacher-definition p, .bed-info p, .semester-info p {
+         font-size: 16px;
+    }
+    /* IMAGES */
+     img {
+         max-width: 100%;
+         height: auto;
+    }
+     .gallery-grid img, .yoga-grid img {
+         height: 250px;
+    }
+    /* BUTTONS */
+     .hero-btn, .bed-btn {
+         padding: 14px 28px;
+         font-size: 15px;
+    }
+}
+/* SMALL MOBILE */
+ @media screen and (max-width: 480px) {
+     .hero h1, .bed-content h1, .sem-content h1, .sem2-content h1, .peer-content h1, .yoga-content h1 {
+         font-size: 34px;
+    }
+     .logo {
+         font-size: 18px;
+    }
+     .nav-logo {
+         width: 40px;
+         height: 40px;
+    }
+     .teacher-profile, .teacher-definition, .teacher-importance, .subjects, .sem2-subjects, .extra {
+         padding: 50px 18px;
+    }
+     .gallery-grid img, .yoga-grid img {
+         height: 200px;
+    }
+}
+/* ========================== MOBILE + TABLET ========================== */
+/* ========================== DESKTOP ========================== */
+ @media screen and (min-width: 992px) {
+     .menu-toggle {
+         display: none;
+    }
+}
+/* ========================== RESPONSIVE NAVBAR ========================== */
+/* Desktop */
+/* ========================== MOBILE NAVBAR FIX ========================== */
+ .menu-toggle{
+     display:none;
+}
+ @media (max-width:768px){
+     .navbar{
+         padding:15px 20px;
+    }
+     .menu-toggle{
+         display:block;
+         color:white;
+         font-size:32px;
+         cursor:pointer;
+    }
+     .nav-links{
+         display:none !important;
+         position:absolute;
+         top:100%;
+         left:0;
+         width:100%;
+         background:#112a55;
+         flex-direction:column;
+         z-index:99999;
+    }
+     .nav-links.active{
+         display:flex !important;
+    }
+     .nav-links li{
+         width:100%;
+    }
+     .nav-links a{
+         display:block;
+         text-align:center;
+         padding:18px;
+    }
+     .dropdown-menu{
+         position:static;
+         display:block;
+         width:100%;
+         background:#17396f;
+    }
+    .college-gallery {
+    padding: 40px;
+}
+}
+/* =================================== MOBILE ONLY (≤768px) =================================== */
+ @media screen and (max-width:768px){
+     .menu-toggle{
+         display:block !important;
+         color:white;
+         font-size:30px;
+         cursor:pointer;
+         z-index:10000;
+    }
+    /* dropdown */
+     .dropdown-menu{
+         position:relative;
+         display:block;
+         width:100%;
+         background:#17396f;
+         box-shadow:none;
+         border-radius:0;
+    }
+     .submenu ul{
+         position:relative;
+         width:100%;
+    }
+    /* HERO */
+     .sem-hero{
+         min-height:70vh;
+         padding:120px 20px;
+    }
+     .sem-content h1{
+         font-size:40px;
+    }
+     .sem-content p{
+         font-size:16px;
+    }
+    /* activities */
+     .activity-grid{
+         grid-template-columns:1fr;
+         gap:20px;
+    }
+     .activities {
+         padding: 35px;
+    }
+     .activity-card{
+         padding:40px 0px;
+    }
+     .activities h1{
+         font-size:32px;
+    }
+     footer{
+         padding:40px 20px;
+    }
+}
+/* Desktop */
+ @media screen and (min-width:769px){
+     .menu-toggle{
+         display:none;
+    }
+     .nav-links{
+         display:flex !important;
+    }
+}
